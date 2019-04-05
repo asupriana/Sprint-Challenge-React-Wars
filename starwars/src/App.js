@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CharacterList from './characterList'
 
 class App extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
+        console.log(data)
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
@@ -30,9 +32,15 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.starwarsChars)
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <CharacterList
+        componentDidMount = {this.componentDidMount}
+        getCharacters = {this.getCharacters}
+        characters = {this.state.starwarsChars}
+        />
       </div>
     );
   }

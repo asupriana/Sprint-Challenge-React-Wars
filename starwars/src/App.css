@@ -6,3 +6,15 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.character {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid rgb(0, 143, 238);
+  margin-bottom: 5%;
+  margin-left: 40%;
+  width: 25%;
+  text-align: center;
+  background: rgb(230, 210, 210);
+}
